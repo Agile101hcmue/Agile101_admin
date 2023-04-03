@@ -1,6 +1,6 @@
 <?php
-    include 'db.php';
-    function check_login($con){ // this func will check user's session, if logged in ? show login btn : no login btn
+    include '../db.php';
+    function check_login($con){
         if( isset($_SESSION['admin_id']) ){
                 $id = $_SESSION['admin_id'];
                 $query = "select * from admin where admin_id = '$id' limit 1";      
@@ -12,19 +12,6 @@
                 }
             }
 
-            header("Location: auth/login.php");
+            header("Location: ../auth/login.php");
             die;
         }
-    
-function random_num($length){
-    $text = "";
-    if($length < 9){
-        $length = 9;
-    }
-    $len = rand(1, $length);
-
-    for($i = 0; $i < $len; $i++){
-        $text .= rand(0,9);
-    }
-    return $text;
-}
