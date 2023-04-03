@@ -18,10 +18,10 @@
     
 function random_num($length){
     $text = "";
-    if($length < 5){
-        $length = 5;
+    if($length < 9){
+        $length = 9;
     }
-    $len = rand(4, $length);
+    $len = rand(1, $length);
 
     for($i = 0; $i < $len; $i++){
         $text .= rand(0,9);
