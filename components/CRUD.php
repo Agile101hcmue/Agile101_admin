@@ -22,17 +22,13 @@
         if(!unlink(UPLOAD_SRC.$img)){
             header("Location: manage.php?alert=img_rem_fail");
             exit;
-            // echo "Deleted Successfully";
         }
     }
 
     if(isset($_POST['addproduct'])){
-        // print_r($_POST);
-        // print_r($_FILES['image']);
         foreach($_POST as $key => $value){
             $_POST[$key] = mysqli_real_escape_string($con, $value);
         }
-        // print_r($_POST[$key]);
         $img_path = image_upload($_FILES['image']);
 
         $query = "INSERT INTO `product`(`name`,`category`, `price`, `description`, `image`, `quantity`) VALUES ('$_POST[name]', '$_POST[category]', '$_POST[price]','$_POST[desc]','$img_path','$_POST[quantity]')";
@@ -64,8 +60,6 @@
         foreach($_POST as $key => $value){
             $_POST[$key] = mysqli_real_escape_string($con, $value);
         }
-        // print_r($_POST);
-        // print_r($_FILES);
 
         if(file_exists($_FILES['image']['tmp_name']) || is_uploaded_file($_FILES['image']['tmp_name'])){
             $query = "select * from `product` where `id` = '$_POST[editpid]'";
