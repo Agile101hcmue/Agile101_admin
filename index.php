@@ -1,6 +1,9 @@
 <?php
-
     session_start();
+    include("db.php");
+
+    include("function.php");
+    $admin_data = check_login($con);
 ?>
 
 <!DOCTYPE html>
@@ -9,45 +12,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agile101 - Administrator Panel</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.css">
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    <!-- <script src="./js/print.js"></script> -->
+    <title>Admin role</title>
 </head>
 <body>
-    <div>
-        <h4>Hello World</h4>
+    <header>
+        <?php include("./header.php"); ?>
+    </header>
+    <div align="center">
+        <h2>Phân vùng quản lý</h2>
     </div>
-    <div>
-        -- check login session --
-        <?php
-                include 'db.php';
-                function check_session_that_change_btn_displayed_on_navbar($con){
-                    if( isset($_SESSION['admin_id']) ){
-                        $id = $_SESSION['admin_id'];
-                        $query = "select * from admin where admin_id = '$id' limit 1";      
-                        $result = mysqli_query($con,$query);
-        
-                        if($result && mysqli_num_rows($result) > 0){
-                            $user_data = mysqli_fetch_assoc($result);
-                            return $user_data;
-                        }
-                    }
-                }
-                $user_data = check_session_that_change_btn_displayed_on_navbar($con);
 
-                if(!isset($_SESSION['admin_id'])){
-                    echo '<strong>Oh, bạn chưa đăng nhập! </strong>
-                        <a href="./auth/login.php"><input type="button" class="btn btn-outline-primary me-2" value="Đăng nhập"></a>';
-                }
-                else{
-                    echo "<strong>Xin chào, ";
-                    echo $user_data['admin_name'];
-                    echo '</strong>';
-                    echo '<a href="./auth/logout.php"><input type="button" class="btn btn-outline-primary me-2 ms-3" value="Đăng xuất"></a>';
-                    echo '</div>';
-                    echo '<div>';
-                    echo '--- add new admin (require after an admin had logged in) ---';
-                    echo '<a href="./auth/add_admin.php"><input type="button" class="btn btn-outline-primary me-2" value="Thêm admin mới"></a>';
-                    echo '</div>';
-                }
-        ?>
+    <!-- custom from here -->
+    <?php include './other_components_ui/sidebar.php'; ?>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="bouncing_text">
+                    <small><strong> <--- Hãy chọn một mục để bắt đầu</strong></small>
+                </div>
+            </main>
+            <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+        </div>
+    </div>
+    <?php include './footer.php'; ?>
+
 </body>
 </html>
