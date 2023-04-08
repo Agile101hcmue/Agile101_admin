@@ -16,7 +16,7 @@
             $query = "insert into admin (admin_id, admin_name, role, phone, password) values ('$admin_id', '$admin_name', '$role','$phone', '$password')";
             mysqli_query($con, $query);
 
-            header("Location: ./index.php");
+            header("Location: ../index.php");
             die;
         }
         else{
@@ -34,18 +34,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="./bootstrap-5.0.2-dist/js/bootstrap.js"></script> -->
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
+    
     <title>Thêm quản trị viên</title>
 </head>
 <body>
+    <header>
+        <?php 
+            include '../header.php';
+            include '../other_components_ui/sidebar.php';
+        ?>
+    </header>
     <main>
-        <h2 align="center">Thêm quản trị viên mới</h2>
+        <h2 class="text-center">Thêm quản trị viên mới</h2>
         <form class="mt-5" action="" method="POST" align="center">
             <div>
                 <label for=""><strong>Tên admin</strong>:</label> <input type="text" name="admin_name" id="admin_name"><br>
             </div>
+            <!-- <input type="text" name="role" id="role"><br> -->
             <div class="mt-4">
                 <label for=""><strong>Chọn vị trí</strong>:</label>
                 <select name="role" id="role">

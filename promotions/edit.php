@@ -11,15 +11,49 @@
     <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <script src="../bootstrap-5.0.2-dist/js/bootstrap.js"></script>
 </head>
-<h2>Edit Promotions</h2><br>
-<form action="crud.php" method="post" enctype="multipart/form-data">
-    <label for="">Name: </label> <input type="text" name="name" id="editname" required><br>
-    <label for="">Promotion Description: </label> <textarea name="desc" id="editdesc" cols="30" rows="10" required></textarea><br>
-    <img src="" id="editimg" width="100%" alt="">
-    <label for="">Image: </label> <input type="file" name="image" id="" accept=".jpg,.png,.jpeg"><br>
-    <input type="hidden" name="editpid" id="editpid">
-    <input type="submit" value="Confirm changes" name="editproduct">
-</form>
+<div class="container text-center mt-5">
+    <div class="text-center h3 fw-normal">
+        Chỉnh sửa thông tin Khuyến mãi
+    </div>
+    <small class="mb-5 "><i>Các thông tin sẽ được cập nhật mới cho Khuyến mãi sau khi bạn nhấn Xác nhận</i></small>
+            
+    <form action="crud.php" method="post" enctype="multipart/form-data">
+        <div class="d-flex justify-content-center mt-5">
+            <div class="form-floating mb-3 col-md-6">
+                <label for="">Cập nhật tên khuyến mãi: </label>
+                <input type="text" name="name" id="editname" required><br>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-5">
+            <div class="form-floating mb-3 col-md-6">
+                <label for="">Cập nhật chi tiết: </label> <textarea name="desc" id="editdesc" cols="30" rows="10" required></textarea><br>
+            </div>
+        </div>
+
+        <img src="" id="editimg" width="100%" alt="">
+
+        <div class="d-flex justify-content-center mt-5">
+            <div class="form-floating mb-3 col-md-6">
+                <label for="">Cập nhật hình ảnh: </label> <input type="file" name="image" id="" accept=".jpg,.png,.jpeg"><br>
+            </div>
+        </div>
+        <input type="hidden" name="editpid" id="editpid">
+        <div class="d-flex justify-content-center mt-5">
+            <div class="form-floating mb-3 col-md-6">
+                <input type="submit" value="Confirm changes" name="editproduct">
+            </div>
+        </div>
+
+        <!-- <div class="d-flex justify-content-center mt-5">
+                    <div class="form-floating mb-3 col-md-6">
+                        <label for="">Cập nhật giá bán (VND):</label>
+                        <input type="number" name="price" id="editprice" min="100" class="form-control mt-5">
+                    </div>
+                </div> -->
+    </form>
+</div>
+
 
 <?php
     include("../promotions/connection.php");

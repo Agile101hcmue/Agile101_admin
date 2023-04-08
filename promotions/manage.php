@@ -18,13 +18,46 @@
 </head>
 <body>
     <!-- add product form -->
-    <h2 align="center">Thêm Khuyến Mãi Mới</h2>
+    <!-- <h2 align="center">Thêm Khuyến Mãi Mới</h2>
     <form action="crud.php" method="post" enctype="multipart/form-data">
         <label for="">Tên: </label> <input type="text" name="name" id="" required><br>
         <label for="">Chi tiết: </label> <textarea name="desc" id="" cols="30" rows="10" required></textarea><br>
         <label for="">Hình ảnh hiển thị: </label> <input type="file" name="image" id="" accept=".jpg,.png,.jpeg" required><br>
         <input type="submit" value="Add This Promotion" name="addproduct">
+    </form> -->
+
+
+    <form action="crud.php" method="post" enctype="multipart/form-data">
+        <h2 align="center" class="mb-4 mt-4">Thêm Khuyến Mãi Mới</h2>
+        <div class="d-flex justify-content-center">
+            <div class="form-floating mb-3 col-md-6">
+                <input type="text" class="form-control mt-5" id="" name="name" required>
+                <label for="">Tên thông tin khuyến mãi mới:</label>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="form-floating mb-3 col-md-6">
+                <input type="text" class="form-control mt-5" id="" name="desc" required>
+                <label for="">Chi tiết khuyến mãi:</label>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center mt-3">
+            <div class="form-floating mb-3 col-md-6">
+                <label for="" class="mb-5">Hình ảnh hiển thị</label>
+                <input class="form-control mt-4" type="file" id="" name="image" multiple="" accept=".jpg,.png,.jpeg" required>    
+            </div>
+                <!-- <input type="file" class="btn btn-primary" name="image" accept=".jpg,.png,.jpeg" id="" required> -->
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <div class="form-floating mb-3 col-md-6" align="center">
+                <input type="submit"  class="btn btn-primary" value="Thêm khuyến mãi này" name="addproduct">
+            </div>
+        </div>
     </form>
+
     <h2 align="center">Quản lý các Khuyến mãi</h2>
     <?php
         if(isset($_GET['alert'])){
