@@ -33,7 +33,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://github.com/TrHgTung/e_commerce_admin">
+                            <a class="nav-link" href="https://github.com/TrHgTung/Agile101_admin">
                                 <span data-feather="bar-chart-2" class="align-text-bottom"></span>
                                 Cập Nhật Phiên Bản Mới
                             </a>

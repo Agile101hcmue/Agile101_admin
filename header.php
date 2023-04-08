@@ -1,5 +1,5 @@
 <?php
-    define("DOMAIN", "http://127.0.0.1/e_commerce_admin/"); // remmeber to replace/change new domain before deploy/hosting
+    define("DOMAIN", "http://127.0.0.1/Agile101_admin/"); // remmeber to replace/change new domain before deploy/hosting
 ?>
 
 <div class="container">
