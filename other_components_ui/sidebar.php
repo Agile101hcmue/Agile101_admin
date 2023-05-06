@@ -39,7 +39,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./documents/privacy.php">
+                            <a class="nav-link" href="<?php echo $domain; ?>/documents/privacy.php">
                                 <span data-feather="layers" class="align-text-bottom"></span>
                                 Chính Sách
                             </a>

@@ -32,20 +32,19 @@
             <div class="form-floating mb-3 col-md-6">
                 <select class="form-select" name="category" id="category" required>
                     <option selected>--- Chọn một thể loại ---</option>
-                    <option value="sach-giao-khoa">Sách giáo khoa</option>
-                    <option value="truyen-tranh">Truyện tranh</option>
+                    <option value="sach-giao-duc">Sách giáo khoa</option>
+                    <option value="sach-thieu-nhi">Truyện tranh</option>
                     <option value="sach-giao-duc">Giáo dục</option>
-                    <option value="tieu-thuyet">Tiểu thuyết</option>
-                    <option value="loi-song">Lối sống & kỹ năng</option>
-                    <option value="van-hoc-dan-gian">Văn học dân gian</option>
-                    <option value="van-hoc-hien-dai">Văn học hiện đại</option>
-                    <option value="sach-nuoc-ngoai">Tác phẩm nước ngoài</option>
-                    <option value="hoc-thuat">Học thuật & báo cáo khoa học</option>
-                    <option value="vu-tru">Vũ trụ & thiên văn</option>
-                    <option value="ton-giao">Tôn giáo</option>
-                    <option value="giao-trinh-dai-hoc">Các giáo trình cấp đại học</option>
-                    <option value="luat">Luật & chính trị</option>
-                    <option value="khac">Khác</option>
+                    <option value="sach-truyen">Tiểu thuyết</option>
+                    <option value="sach-doi-song">Lối sống & kỹ năng</option>
+                    <option value="sach-truyen">Văn học dân gian</option>
+                    <option value="sach-truyen">Văn học hiện đại</option>
+                    <option value="sach-truyen">Tác phẩm nước ngoài</option>
+                    <option value="sach-giao-duc">Học thuật & báo cáo khoa học</option>
+                    <option value="sach-doi-song">Vũ trụ & thiên văn</option>
+                    <option value="sach-doi-song">Tôn giáo</option>
+                    <option value="sach-giao-duc">Các giáo trình cấp đại học</option>
+                    <option value="sach-giao-duc">Luật & chính trị</option>
                 </select>
             </div>
         </div>

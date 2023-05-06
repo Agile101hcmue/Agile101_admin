@@ -44,13 +44,6 @@
                 <input type="submit" value="Confirm changes" name="editproduct">
             </div>
         </div>
-
-        <!-- <div class="d-flex justify-content-center mt-5">
-                    <div class="form-floating mb-3 col-md-6">
-                        <label for="">Cập nhật giá bán (VND):</label>
-                        <input type="number" name="price" id="editprice" min="100" class="form-control mt-5">
-                    </div>
-                </div> -->
     </form>
 </div>
 
